@@ -22,16 +22,13 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="navbar_left">
-        <div class="navbar_icon" id="reload_button">
-          <img src="Data/WebIcon.jpeg" style="transform: scale(2)" />
-        </div>
-        <p id="navbarDisplay">
-          <strong>Novel Name</strong>
-          / Chapter 1: Whispers of Amnesia
-        </p>
+      <div class="navbar_icon" id="reload_button">
+        <img src="Data/WebIcon.jpeg" style="transform: scale(2)" />
       </div>
-      <div class="navbar_right"></div>
+      <p id="navbarDisplay">
+        <span class="novel-name">Novel Name</span>
+        <span class="chapter-title">Chapter 1: Whispers of Amnesia</span>
+      </p>
     </div>
     <div class="content">
       <strong class="chapter_header">Chapter x: Display Name</strong>
@@ -119,18 +116,20 @@
 
           // Navbar
           const navbarDisplayName = document.querySelector("#navbarDisplay");
-          navbarDisplayName.innerHTML = `<strong>${
+          navbarDisplayName.innerHTML = `
+          <span class="novel-name"><strong>${
             novel.displayName
-          } /</strong> ${
+          } /</strong></span>
+          <span class="chapter-title">${
             "Chapter " + chapterPage + ": " + chapterData.displayName
-          }`;
+          }</span>`;
 
           // Translator and Editor
           const footer = chapterContainer.querySelector(".chapter_footer");
           footer.innerHTML = `
-        <strong>Translator:</strong> ${novel.translator}
+        <span><strong>Translator:</strong> ${novel.translator}</span>
         <div></div>
-        <strong>Editor:</strong> ${novel.editor}
+        <span><strong>Editor:</strong> ${novel.editor}</span>
       `;
 
           // Display name
