@@ -105,6 +105,10 @@ body{
     object-fit: cover;
 }
 
+#state_description{
+    margin-bottom: 35px
+}
+
 .login_header{
     font-weight: 400;
 }
@@ -132,6 +136,8 @@ body{
 
     font-size: medium;
     text-wrap: nowrap;
+
+    margin-bottom: 75px;
 }
 .sign_up strong{
     font-size: small;
@@ -170,7 +176,6 @@ body{
 .terms_button:hover{
     text-decoration: underline;
 }
-
 
 .sponsors{
     display: flex;
@@ -453,5 +458,52 @@ body{
         position: absolute;
         top: -55px;
         left: 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .login{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translateY(-36%);
+
+        width: 250px;
+        height: 400px;
+    }
+    .login strong{
+        text-wrap: wrap;
+        font-size: large;
+    }
+    #state_description{
+        margin-top: 4px;
+        margin-bottom: 10px
+    }
+    .sign_up{
+        margin-bottom: auto;
+        font-size: small;
+    }
+    .sign_up strong{
+        font-size: smaller;
+    }
+
+    .sponsors{
+        transform: scale(1.1);
+    }
+    .sponsors img{
+        transform: scale(1.5);
+    }
+    .sponsors strong{
+        font-size: x-small;
+        line-height: 100%;
+    }
+
+    .terms_of_service p{
+        font-size: xx-small;
+    }
+}
+@media screen and (max-height: 605px) {
+    .login{
+        top: 50%;
+        transform: translateY(-42%);
     }
 }
