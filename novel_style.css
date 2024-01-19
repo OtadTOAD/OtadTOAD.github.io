@@ -101,10 +101,11 @@ body{
 
 .chapter_footer{
     width: 100%;
-    height: 15px;
+    height: auto;
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: left;
     text-align: center;
     line-height: 80%;
@@ -166,4 +167,13 @@ body{
 
 #reload_button{
     cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .chapter_footer strong{
+        margin-left: 5px;
+    }
+    .chapter_footer div{
+        display: none;
+    }
 }
