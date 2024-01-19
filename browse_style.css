@@ -42,15 +42,27 @@ strong, p{
 }
 
 .navbar_search{
+    border: 1px solid #d7d8e0;
+    background: rgba(239, 239, 241, 0.158);
     border-radius: 100%;
-    border-width: 1px;
-    border-color: #83848f;
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 .navbar_search i{
     font-size: 16px;
+    color: rgba(18,18,23,0.24);
+    font-size: 16px;
+    margin-top: 3px;
+    margin-left: 3px;
+    color: #83848f;
 }
+.navbar_search:hover, .navbar_search:hover > i {
+    color: blue;
+    transition: 0.1s;
+    background: #edf5ff;
+}
+
 .navbar_settings{
     background-color: rgba(255, 255, 255, 0);
     border-width: 0px;
@@ -60,7 +72,14 @@ strong, p{
 .navbar_settings i{
     width: 100%;
     font-size: 24px;
+    color: #83848f;
+    cursor: pointer;
 }
+.navbar_settings i:hover{
+    color: blue;
+    transition: .25s;
+}
+
 .navbar_other_button{
     width: 80px;
     height: 100%;
@@ -159,6 +178,7 @@ strong, p{
     font-size: larger;
     padding-left: 5px;
     padding-bottom: 5px;
+    user-select: none;
 }
 
 .genres{
@@ -387,4 +407,76 @@ strong, p{
 }
 .content_end i{
     margin-left: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+    /*Navbar*/
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar_icon{
+        display: none;
+    }
+
+    .navbar_right{
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    .navbar_left{
+        width: 100%;
+    }
+
+    /*Content*/
+    .content{
+        flex-direction: column;
+        width: 100%;
+        height: 1400px;
+    }
+    .genres{
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 290px;
+    }
+
+    .novels{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .novels_sort strong{
+        text-align: center;
+    }
+    .novels_items{
+        justify-content: center;
+    }
+    .novel_item_icon{
+        width: 120px;
+        height: 200;
+    }
+    .content_end p{
+        width: 150px;
+    }
+    .novel_item{
+        width: 400px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 825px) {
+    .content{
+        height: 1925px;
+    }
+
+    .novel_item{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .novels_items{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 420px) {
+    .content{
+        height: 1955px;
+    }
 }

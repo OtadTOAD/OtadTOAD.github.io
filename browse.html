@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Browse</title>
     <link rel="stylesheet" href="browse_style.css" />
     <link
       rel="stylesheet"
@@ -49,7 +49,7 @@
 
       <div class="navbar_right">
         <button class="navbar_search">
-          <i class="fa-solid fa-magnifying-glass" style="color: #83848f"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button
           class="navbar_other_button"
@@ -68,7 +68,7 @@
           Forum
         </button>
         <button class="navbar_settings">
-          <i class="fa-solid fa-gear" style="color: #83848f"></i>
+          <i class="fa-solid fa-gear"></i>
         </button>
         <button
           class="navbar_sign_in"
@@ -713,11 +713,28 @@
             rankingContainer.style.display = "grid";
             genreLeads.style.display = "flex";
             stateDisplay.classList = "fa-solid fa-chevron-up";
+            rankingDisplay.parentNode.style.height = "";
           } else {
             rankingContainer.style.display = "none";
             genreLeads.style.display = "none";
             stateDisplay.classList = "fa-solid fa-chevron-down";
+            rankingDisplay.parentNode.style.height = "40px";
           }
+        });
+
+        // Leads
+        const leadButtons = genreLeads.querySelectorAll("button");
+        leadButtons.forEach(function (leadButton) {
+          leadButton.addEventListener("click", function () {
+            // Reset buttons
+            leadButtons.forEach(function (button) {
+              button.style.background = "";
+              button.style.color = "";
+            });
+
+            leadButton.style.background = "#fff";
+            leadButton.style.color = "#3b66f5";
+          });
         });
 
         const genreButtons = document.querySelectorAll(".genres_list button");
