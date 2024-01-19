@@ -576,3 +576,52 @@ strong {
         width: 100%;
     }
 }
+@media screen and (max-width: 550px) {
+    .content_segment{
+        width: 350px;
+    }
+    #content_segment_1{
+        height: 785px;
+    }
+    #content_segment_2{
+        height: 850px;
+    }
+    .weekly_featured_options{
+        gap: 10px;
+    }
+    .weekly_featured_selection{
+        height: 275px;
+    }
+
+    .weekly_featured_selection_text_data p{
+        font-size: x-small;
+    }
+    .weekly_featured_selection_text strong{
+        font-size: large;
+    }
+    #weekly_featured_description{
+        font-size: x-small;
+    }
+}
+@media screen and (max-width: 400px) {
+    /*Hacky way of doing it, but it works*/
+    .navbar{
+        padding-top: 0px;
+        padding-bottom: 25px;
+        transform: translateX(-25%) scale(.65);
+        overflow: visible;
+        width: 200%;
+    }
+
+    #content_segment_1{
+        margin-top: 5px;
+        padding-top: 0px;
+        justify-content: start;
+    }
+    .weekly_book{
+        transform: scale(.85) translateX(-5%);
+    }
+    .weekly_book_display p{
+        font-size: 17px;
+    }
+}

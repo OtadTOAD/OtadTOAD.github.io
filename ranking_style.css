@@ -438,6 +438,16 @@
     }
 }
 @media screen and (max-width: 540px) {
+    /*Hacky way of doing it, but it works*/
+    .navbar{
+        padding-top: 0px;
+        padding-bottom: 25px;
+        transform: translateX(-25%) scale(.65);
+        overflow: visible;
+        width: 200%;
+    }
+
+    
     .content{
         height: 4100px;
     }
