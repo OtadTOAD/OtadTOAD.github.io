@@ -1,4 +1,14 @@
 /*Root*/
+html{
+    height: -webkit-fill-available
+} 
+body{
+    position: fixed;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 2px;
+}
 strong, p, a {
     font-family: 'Archivo', sans-serif;
 }
