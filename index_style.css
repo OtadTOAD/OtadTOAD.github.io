@@ -3,9 +3,8 @@ html{
     height: -webkit-fill-available
 } 
 body{
-    position: fixed;
     overflow-x: hidden;
-    height: 100%;
+    height: auto;
     width: 100%;
     margin: 2px;
 }
@@ -173,13 +172,12 @@ strong {
 /*Content*/
 .content{
     width: 100%;
-    height: 950px;
+    height: auto;
     background-color: rgba(0, 0, 255, 0);
 
     display: flex;
     flex-direction: column;
     justify-content: start;
-    overflow: hidden;
 }
 .content_segment{
     height: 425px;

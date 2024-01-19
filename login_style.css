@@ -429,16 +429,28 @@ body{
 @media screen and (max-width: 1200px) {
     .main{
         flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     #left{
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     #right{
         width: 100%;
         height: 100%;
-        margin-bottom: 25px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .login{
@@ -446,8 +458,10 @@ body{
         width: 325px;
 
         margin: auto;
-        top: 0px;
-        right: 0px;
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         margin-bottom: 50px;
     }
@@ -461,11 +475,28 @@ body{
     }
 }
 @media screen and (max-width: 500px) {
-    .login{
-        position: absolute;
+    .login_inputs{
+        position: fixed;
         top: 50%;
-        right: 50%;
-        transform: translateX(50%) translateY(-36%);
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.75);
+    }
+    .login_inputs_displayDescription{
+        text-wrap: nowrap;
+        font-size: small;
+    }
+    .login_exit{
+        margin-bottom: 15px;
+    }
+    .main_login_choices_container{
+        transform: scale(.9);
+    }
+
+    .login{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         width: 250px;
         height: 400px;
@@ -501,9 +532,14 @@ body{
         font-size: xx-small;
     }
 }
+@media screen and (max-width: 300px) {
+    .login{
+        transform: translate(-50%, -50%) scale(.7);
+    }
+}
 @media screen and (max-height: 605px) {
     .login{
         top: 50%;
-        transform: translateY(-42%);
+        transform: translateY(-25%);
     }
 }
