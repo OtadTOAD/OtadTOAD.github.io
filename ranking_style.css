@@ -6,7 +6,9 @@ body{
     flex-direction: column;
     justify-content: start;
 }
-
+p, strong{
+    font-family: 'Archivo', sans-serif;
+}
 
 /*Navbar*/
 .navbar{

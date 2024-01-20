@@ -6,6 +6,9 @@ body{
     flex-direction: column;
     justify-content: start;
 }
+p, strong, button{
+    font-family: 'Archivo', sans-serif;
+}
 
 /*Navbar*/
 .navbar{
@@ -181,6 +184,7 @@ body{
     padding-left: 5px;
     padding-bottom: 5px;
     user-select: none;
+    font-family: 'Archivo', sans-serif;
 }
 
 .genres{
@@ -283,6 +287,7 @@ body{
     padding-bottom: 15px;
     border-bottom: #83848f49 1px solid;
     margin-bottom: 12px;
+    font-family: 'Archivo', sans-serif;
 }
 .novels_sort button{
     border-radius: 16px;
